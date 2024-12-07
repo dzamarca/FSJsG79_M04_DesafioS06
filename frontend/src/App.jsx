@@ -17,7 +17,6 @@ function App() {
     <BrowserRouter>
       <CardProvider>
         <Navbar />
-        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<RegistrerPages />} />
@@ -28,7 +27,6 @@ function App() {
             <Route path="/404" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </main>
         <Footer />
       </CardProvider>
     </BrowserRouter>

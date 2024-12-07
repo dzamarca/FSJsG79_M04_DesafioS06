@@ -7,8 +7,7 @@ const Cart = () => {
     const { cart, handleDisminuye, handleIncrementa, calcularTotal } = useContext(CartContext)
     return (
         <>
-            <div className='d-flex flex-column align-content-between align-items-center'> 
-
+            <div className='d-flex flex-column justify-content-center align-items-center'> 
                 <h3>Detalles del Pedido</h3>
                 {cart.map(pizza =>
                     <div className="cardPizza" key={pizza.id}>

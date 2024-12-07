@@ -39,7 +39,7 @@ const RegistrerPages = () => {
 
     return (
  
-        <div className="d-flex flex-column align-content-between align-items-center">
+        <div className="d-flex flex-column justify-content-center align-items-center">
             <div className=" box d-flex justify-content-center align-items-center mt-2 radius">
                 <div className="boxImage"></div>
                 <div className="boxInside d-flex justify-content-center align-items-center ">
