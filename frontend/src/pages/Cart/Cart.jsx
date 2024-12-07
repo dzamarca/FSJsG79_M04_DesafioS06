@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap"
 import "./Cart.css"
 
 const Cart = () => {
-    const { cart, handleDisminuye, handleIncrementa, calcularTotal } = useContext(CartContext)
+    const { cart, handleDisminuye, handleIncrementa, total } = useContext(CartContext)
     return (
         <>
             <div className='d-flex flex-column justify-content-center align-items-center'> 
@@ -31,7 +31,7 @@ const Cart = () => {
                         </div>
                     </div>
                 )}
-                <h4>Total: {calcularTotal(cart).toLocaleString()}</h4>
+                <h4>Total: {total}</h4>
                 <Button variant="dark">Pagar 🛒</Button>
             </div>
         </>
