@@ -18,7 +18,7 @@ const CardProvider = ({ children }) => {
     const handleDisminuye = (id) => setCart(
         (cart) => {
             return cart.map((pizza) =>
-            pizza.id === id ? { ...pizza, count: pizza.count - 1 } : pizza
+                pizza.id === id ? { ...pizza, count: pizza.count - 1 } : pizza
         ).filter((pizza) => pizza.count > 0)
         }
     )
