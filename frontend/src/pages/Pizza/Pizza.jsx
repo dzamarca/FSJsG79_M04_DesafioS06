@@ -20,6 +20,8 @@ const Pizza = () => {
                 {pizzaUnitaria.map(pizza => (
                     <div key={pizza.id} className="d-flex justify-content-center mb-4 col-12 col-md-6 col-lg-4">
                         <CardPizza
+                            pizza={pizza}
+                            id={pizza.id}
                             name={pizza.name}
                             price={pizza.price}
                             ingredients={pizza.ingredients}
