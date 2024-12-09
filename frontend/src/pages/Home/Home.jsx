@@ -1,21 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import CardPizza from "../../components/CardPizza/CardPizza"
 import Header from '../../components/Header/Header'
 import './Home.css'
+import { PizzaContext } from '../../context/PizzaContext'
 
 const Home = () => {
-  const [pizzas, setPizzas] = useState([])
-  const URL = 'http://localhost:5000/api/pizzas'
-
-  useEffect(() => {
-    loadPizzas()
-  }, [])
-
-  const loadPizzas = async () => {
-    const res = await fetch(URL)
-    const data = await res.json()
-    setPizzas(data)
-  }
+  const pizzas = useContext(PizzaContext)
 
   return (
     <>

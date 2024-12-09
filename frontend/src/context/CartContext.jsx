@@ -1,6 +1,6 @@
-import { createContext, useState, useEffect } from "react";
-import { pizzaCart, pizzas } from "../assets/js/pizzas"
-import {  setearValor } from "../assets/utils/funciones"
+import { createContext, useState } from "react";
+import { pizzaCart } from "../assets/js/pizzas"
+import { setearValor } from "../assets/utils/funciones"
 
 export const CartContext = createContext()
 
@@ -19,7 +19,7 @@ const CardProvider = ({ children }) => {
         (cart) => {
             return cart.map((pizza) =>
                 pizza.id === id ? { ...pizza, count: pizza.count - 1 } : pizza
-        ).filter((pizza) => pizza.count > 0)
+            ).filter((pizza) => pizza.count > 0)
         }
     )
 
@@ -38,10 +38,10 @@ const CardProvider = ({ children }) => {
                 //En caso de no existir agrega una pizza nueva al array
                 return [...cart, {
                     id: pizza.id.toUpperCase(),
-                    name: pizza.name, 
-                    price: pizza.price, 
-                    count: 1, 
-                    img: pizza.img 
+                    name: pizza.name,
+                    price: pizza.price,
+                    count: 1,
+                    img: pizza.img
                 }]
             }
         }
