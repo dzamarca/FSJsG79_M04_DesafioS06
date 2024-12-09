@@ -3,12 +3,10 @@ import { setearValor } from '../../assets/utils/funciones.js'
 import './CardPizza.css'
 import { Link } from 'react-router-dom';
 import { useContext } from "react";
-import { CartContext } from "../../context/CartContext.jsx";
-
+import { CartContext } from "../../context/CartContext";
 
 const CardPizza = ({pizza, id, name, price, ingredients, img, desc ="" }) => {
   const {handleAgrega} = useContext(CartContext)
-
 
   return (
     <Card className="card mt-3" bg="light">

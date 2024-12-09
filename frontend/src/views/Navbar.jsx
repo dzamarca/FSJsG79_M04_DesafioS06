@@ -1,11 +1,10 @@
 import { Container, Button, Navbar as NavbarAlias, Nav } from 'react-bootstrap';
-import { setearValor } from '../assets/utils/funciones.js' /* Se crea funcion para ser utilizada cuando se necesite */
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import { CartContext } from '../context/CartContext.jsx';
+import { CartContext } from '../context/CartContext';
 
 const Navbar = () => {
-  const { total } = useContext(CartContext)
+  const {handleCalculaTotal} = useContext(CartContext)
   const token = false
   const botones = (token ?
     (<>
@@ -41,7 +40,7 @@ const Navbar = () => {
             </Nav>
             <Nav className='justify-content-end'>
               <Link to='/cart'>
-                <Button variant="outline-light">🛒Total: ${setearValor(total)}</Button>
+                <Button variant="outline-light">🛒Total: ${handleCalculaTotal()}</Button>
               </Link>
             </Nav>
           </NavbarAlias.Collapse>

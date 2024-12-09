@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext.jsx';
+import { CartContext } from '../../context/CartContext';
 import { Button } from "react-bootstrap"
 import "./Cart.css"
 
 const Cart = () => {
-    const { cart, handleDisminuye, handleIncrementa, total } = useContext(CartContext)
+    const { cart, handleDisminuye, handleIncrementa, handleCalculaTotal } = useContext(CartContext)
     return (
         <>
             <div className='d-flex flex-column justify-content-center align-items-center'> 
@@ -31,7 +31,7 @@ const Cart = () => {
                         </div>
                     </div>
                 )}
-                <h4>Total: {total}</h4>
+                <h4>Total: {handleCalculaTotal()}</h4>
                 <Button variant="dark">Pagar 🛒</Button>
             </div>
         </>
